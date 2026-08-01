@@ -21,3 +21,7 @@ oracle/state/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Claude Code local config / instructions
+.claude/
+CLAUDE.md
