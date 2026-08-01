@@ -1,0 +1,23 @@
+# Rust / Soroban
+/target
+*.wasm
+.soroban/
+
+# Node
+node_modules/
+dist/
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Oracle local state
+oracle/state/
+*.local.json
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
