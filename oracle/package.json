@@ -1,0 +1,24 @@
+{
+  "name": "vrf-oracle-service",
+  "version": "0.1.0",
+  "description": "Off-chain oracle service for stellar-vrf-service: watches for randomness requests and fulfills them with BLS12-381 proofs",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/watch.ts",
+    "keygen": "tsx scripts/keygen.ts",
+    "demo": "tsx scripts/demo.ts",
+    "test": "node --import tsx --test tests/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@noble/curves": "^2.2.0",
+    "@stellar/stellar-sdk": "^16.2.0",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
