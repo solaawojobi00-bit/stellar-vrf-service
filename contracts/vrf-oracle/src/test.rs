@@ -5,7 +5,7 @@ use soroban_sdk::{
     Bytes, Env, U256,
 };
 
-fn setup(env: &Env) -> (VrfOracleContractClient, Address, Bls12381Fr) {
+fn setup(env: &Env) -> (VrfOracleContractClient<'_>, Address, Bls12381Fr) {
     let contract_id = env.register(VrfOracleContract, ());
     let client = VrfOracleContractClient::new(env, &contract_id);
 

@@ -28,8 +28,12 @@ progress on [`feat/phase-1`](../../tree/feat/phase-1). See the
 contracts/vrf-oracle/   Soroban contract (Rust)
 oracle/                 off-chain oracle service (Node.js/TypeScript)
 PRD.md                  problem, users, scope, non-goals
-ARCHITECTURE.md          design and technical rationale
+ARCHITECTURE.md         design and technical rationale
+CONTRIBUTING.md         dev setup, branch naming, tests, PR process
 ```
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) to get set up locally and pick
+up an issue.
 
 ## License
 
