@@ -109,12 +109,17 @@ cost for a Phase 1 that needs to actually work within real resource
 limits, for no cryptographic benefit over the BLS construction above in
 this single-oracle trust model.
 
-**Risk to validate early (tracked as the first Phase 1 milestone):**
-the off-chain library's `hash_to_g2` must produce bit-identical output
-to Soroban's host `hash_to_g2` for the same message and DST (both
-should implement RFC 9380's `BLS_SIG_BLS12381G2_XMD:SHA-256_SSWU_RO_`
-suite, but this is only confirmed by an actual passing end-to-end test,
-not by documentation alone).
+**Validated, not just assumed:** the off-chain library
+(`@noble/curves`) and Soroban's host `hash_to_g1`/`hash_to_g2` must
+produce bit-identical output for the same message and DST for any of
+this to work. This was confirmed empirically, not just by reading
+documentation - `oracle/scripts/demo.ts` runs against a real Testnet
+deployment, has the off-chain oracle sign a real request with
+`@noble/curves`, and has the on-chain contract accept that exact proof
+via its native `pairing_check`. A byte-level mismatch in either side's
+hash-to-curve implementation would make every proof fail verification,
+so a passing end-to-end run is a real, not incidental, confirmation of
+compatibility.
 
 ## Soroban contract design
 

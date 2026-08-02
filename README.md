@@ -18,9 +18,12 @@ ECVRF.
 
 ## Status
 
-Phase 1 (a genuinely working end-to-end request → fulfill cycle) is in
-progress on [`feat/phase-1`](../../tree/feat/phase-1). See the
-[issues](../../issues) for the Phase 2+ backlog.
+Phase 1 is complete: the contract and oracle service work end to end
+against a real deployment on Stellar Testnet
+(`CATVK434SQAHFRD4HJAS4DIW3TQH5NWGGHADPN3ZT5HSPDN47BBTLJN3`) - see
+`oracle/scripts/demo.ts` for the request → fulfill →
+independently-re-verify cycle. See the [issues](../../issues) for the
+Phase 2+ backlog.
 
 ## Layout
 
